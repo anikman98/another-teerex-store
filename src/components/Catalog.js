@@ -35,7 +35,7 @@ const Catalog = () => {
       item[category].toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
-  
+
   const filteredProduct = search.filter(
     (item) =>
       (colorFilter.length === 0 || colorFilter.includes(item.color)) &&
@@ -47,13 +47,17 @@ const Catalog = () => {
   );
   return (
     <div className="catalog">
-      {products
-        ? filteredProduct.length
-          ? filteredProduct.map((item) => {
-              return <ProductCard product={item} key={item.id} />;
-            })
-          : "No products"
-        : "Loading"}
+      {products ? (
+        filteredProduct.length ? (
+          filteredProduct.map((item) => {
+            return <ProductCard product={item} key={item.id} />;
+          })
+        ) : (
+          <h3>No products</h3>
+        )
+      ) : (
+        <h3>Loading</h3>
+      )}
     </div>
   );
 };
