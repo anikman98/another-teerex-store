@@ -1,0 +1,21 @@
+header{
+    padding: 0 30px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.links-item{
+    text-decoration: none;
+    color: rgb(103, 103, 103);
+    font-size: 1.3em;
+    transition: 0.3s ease-in-out;
+}

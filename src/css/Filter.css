@@ -1,0 +1,25 @@
+.filter{
+    width: 15%;
+    border: 1px solid rgb(207, 207, 207);
+    padding: 30px;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.1);
+}
+
+.filter-section{
+    margin-left: 2px;
+    padding-bottom: 0.5rem;
+}
+
+.filter-header{
+    padding-bottom: 5px;
+}
+
+.filter-option{
+    padding: 0 0 2px 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .filter-main{
+        display: none;
+    }
+}
