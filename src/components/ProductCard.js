@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext';
 import '../css/ProductCard.css';
+import { SearchContext } from '../context/SearchContext';
 
 const ProductCard = ({product}) => {
 
@@ -12,7 +13,7 @@ const ProductCard = ({product}) => {
             quantity: 1
         }])
     }
-
+    
   return (
     <div className="product-card">
       <div className="images">

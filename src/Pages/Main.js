@@ -1,3 +1,7 @@
+/*
+  This component is the main page that will be showed on initial load.
+*/
+
 import Header from "../components/Header";
 import Search from "../components/Search";
 import Filter from "../components/Filter";
@@ -15,9 +19,9 @@ const Main = () => {
         </div>
         <div className="lower">
             <Filter />
+          {/* filter component*/}
             <Catalog />
-        {/* filter component*/}
-        {/* catalog component*/}
+          {/* catalog component*/}
         </div>
       </div>
     </div>
