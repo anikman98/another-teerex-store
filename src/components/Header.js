@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
 import '../css/Header.css';
+import { CartContext } from '../context/CartContext';
 
 const Header = () => {
+
+  const { cart, cartItemCount } = useContext(CartContext);
+
   return (
     <header>
       <div className="logo">
@@ -13,6 +18,7 @@ const Header = () => {
         </Link>
         <Link to="/cart" className="links-item">
           <h3>Cart</h3>
+          <div className="cart-item-count">{cartItemCount}</div>
         </Link>
       </div>
     </header>

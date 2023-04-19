@@ -10,7 +10,7 @@ import '../css/Main.css';
 
 const Main = () => {
   return (
-    <div className="app">
+    <>
       <Header />
       <div className="body">
         <div className="upper">
@@ -24,7 +24,7 @@ const Main = () => {
           {/* catalog component*/}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

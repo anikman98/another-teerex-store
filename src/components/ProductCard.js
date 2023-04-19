@@ -1,17 +1,31 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext';
 import '../css/ProductCard.css';
-import { SearchContext } from '../context/SearchContext';
 
 const ProductCard = ({product}) => {
 
-    const {setCart} = useContext(CartContext);
+    const {cart, setCart} = useContext(CartContext);
 
     const handleAddToCart = () => {
-        setCart((prev) => [...prev, {
+        if(cart.find(item => item.id === product.id)){
+            let updatedCart = cart.map(item => {
+                                if(item.id === product.id){
+                                  if (item.quantity < product.quantity)
+                                    ++item.quantity;
+                                  else{
+                                    alert("Only "+product.quantity+" "+product.name+" are available.")
+                                  }
+                                }
+                                console.log(item);
+                                return item;
+                              })
+            setCart(updatedCart);
+        }else{
+          setCart((prev) => [...prev, {
             id : product.id,
             quantity: 1
-        }])
+          }])
+        }
     }
     
   return (

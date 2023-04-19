@@ -2,14 +2,46 @@
   This component is the cart page that will be showed on /cart route.
 */
 
+import { useContext, useEffect } from "react";
 import Header from "../components/Header";
+import { CartContext } from "../context/CartContext";
+import CartProductCard from "../components/CartProductCard";
+import { ProductContext } from "../context/ProductContext";
+import CartTotal from "../components/CartTotal";
 
 const Cart = () => {
+  const { cart, setCart } = useContext(CartContext);
+  const { products } = useContext(ProductContext);
+
+  useEffect(() => {
+  }, [cart]);
+
   return (
-    <div className="app">
+    <>
       <Header />
-      <div className="body">this is cart boi!</div>
-    </div>
+      <div className="cart-container">
+        {cart.length ? (
+          <>
+            <div className="cart-items">
+              {cart.map((item) => {
+                return (
+                  <CartProductCard
+                    key={item.id}
+                    item={item}
+                    product={products.find((product) => product.id === item.id)}
+                  />
+                );
+              })}
+            </div>
+            <div className="cart-total">
+              <CartTotal />
+            </div>
+          </>
+        ) : (
+          "Empty Cart"
+        )}
+      </div>
+    </>
   );
 };
 
