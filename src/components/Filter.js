@@ -12,12 +12,13 @@ const Filter = () => {
     handleTypeSelect,
     handleGenderFilter,
     handlePriceSelect,
+    filterDisplay
   } = useContext(FilterContext);
 
    
 
   return (
-    <div className="filter">
+    <div className={filterDisplay ? "filter-show" : "filter "}>
       <h2>Filter</h2>
       <div className="filter-section">
         <div className="filter-header">

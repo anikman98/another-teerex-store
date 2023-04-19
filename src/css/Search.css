@@ -14,29 +14,39 @@
   stroke-width: 2;
 }
 
-.svg-icon{
+.svg-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.search {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin-left: 50px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-bar {
+  outline: none;
+  border: none;
+  line-height: 35px;
+  font-size: 1.3rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    width: 90%;
+    margin: 0;
+  }
+
+  .filter-button {
     width: 30px;
     height: 30px;
+  }
 }
-
-.search{
-    /* border: 1px solid red; */
-    width: 80%;
-    margin-left: 50px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 10px;
-    align-items: center;
-}
-
-
-.search-bar{
-    outline:none;
-    border: none;
-    line-height: 35px;
-    font-size: 1.3rem;
-    width: 100%;
-}
-

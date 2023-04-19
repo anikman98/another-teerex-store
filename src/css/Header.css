@@ -37,3 +37,23 @@ header{
     justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+    header{
+        padding: 0 15px;
+        align-items: baseline;
+    }
+    
+    .logo{
+        font-size: 0.9rem;
+    }
+
+    .links-item{
+        font-size: 1rem;
+    }
+
+    .cart-item-count{
+        height: 22px;
+        width: 22px;
+
+    }
+}

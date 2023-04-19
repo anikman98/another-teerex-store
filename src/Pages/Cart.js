@@ -8,6 +8,7 @@ import { CartContext } from "../context/CartContext";
 import CartProductCard from "../components/CartProductCard";
 import { ProductContext } from "../context/ProductContext";
 import CartTotal from "../components/CartTotal";
+import EmptyCart from "../components/EmptyCart";
 
 const Cart = () => {
   const { cart, setCart } = useContext(CartContext);
@@ -38,7 +39,7 @@ const Cart = () => {
             </div>
           </>
         ) : (
-          "Empty Cart"
+          <EmptyCart/>
         )}
       </div>
     </>
